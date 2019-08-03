@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import APIfetch from './components/APIcomponents/APIfetch.js';
+import CharacterCard from './components/displayComponents/Card.js';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <p>{dataHolder}</p>
+      <CharacterCard dataToUse = {testSkywalker}/>
     </div>
   );
 }
