@@ -4,13 +4,16 @@ import APIfetch from '../APIcomponents/APIfetch.js';
 
 //const data = APIfetch(address);
 
-const CharacterCard = props => (
-    <Card
-        header={props.dataToUse.name}
-    //   meta='Friend'
-    //   description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-    //extra={extra}
-    />
-);
+const CharacterCard = props => {
+    const data = props.dataToUse;
+    return(
+        <Card
+        name={data.name}
+        //   meta='Friend'
+        gender={data.gender}
+        //extra={extra}
+        />
+        );
+    }
 
 export default CharacterCard;
