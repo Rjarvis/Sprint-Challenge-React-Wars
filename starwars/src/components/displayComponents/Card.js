@@ -1,17 +1,25 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react';
-import APIfetch from '../APIcomponents/APIfetch.js';
 
-//const data = APIfetch(address);
-
+// const extra = (
+//     <a>
+//         <Icon name = {dataToUse.name} />
+//     </a>
+// );
 const CharacterCard = props => {
-    const data = props.dataToUse;
+    console.log("Card.js: CharacterCard: props", props);
+    const dataToUse = props.dataToUse;
+    const height = dataToUse.height;
+    const mass = dataToUse.mass;
+    const gender = dataToUse.gender;
+
+    const descriptionString = String("Height "+height +"; Mass "+ mass +"; Gender "+ gender);
     return(
         <Card
-        name={data.name}
-        //   meta='Friend'
-        gender={data.gender}
-        //extra={extra}
+        // image = {}
+        header = {dataToUse.name}
+        description = {descriptionString}
+        // extra = {extra}
         />
         );
     }
